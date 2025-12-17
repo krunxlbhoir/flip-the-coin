@@ -46,6 +46,7 @@ h1 {
     position: relative;
     transform-style: preserve-3d;
     transition: transform 2s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: rotateY(0deg);
 }
 
 #coin div {
@@ -65,11 +66,14 @@ h1 {
 .heads {
     background: linear-gradient(#f1c40f, #d4ac0d);
     color: #444;
+    backface-visibility: hidden;
+    z-index: 2;
 }
 
 .tails {
     background: linear-gradient(#bdc3c7, #95a5a6);
     color: #444;
+    backface-visibility: hidden;
     transform: rotateY(180deg); /* Start on the back side */
 }
 
